@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "John Clarence Mariano",
+    "studentNumber": "202303260",
+    "course": "BS Computer Science",
+    "yearSection": "3-1",
+    "email": "johnclarence.mariano@cvsu.edu.ph",
+    "address": "Trece Martires, Cavite"
+  },
+  {
+    "id": 2,
+    "name": "Arfernee Marquin Pineda",
+    "studentNumber": "202307456",
+    "course": "BS Information Technology",
+    "yearSection": "3-1",
+    "email": "arfernee.pineda@cvsu.edu.ph",
+    "address": "General Trias, Cavite"
+  },
+  {
+    "id": 3,
+    "name": "Edrian Jake Armesa",
+    "studentNumber": "202309789",
+    "course": "BS Computer Science",
+    "yearSection": "3-1",
+    "email": "edrianjake.armesa@cvsu.edu.ph",
+    "address": "Silang, Cavite"
+  },
+  {
+    "id": 4,
+    "name": "Mark Justin Aguirre",
+    "studentNumber": "202301011",
+    "course": "BS Information Systems",
+    "yearSection": "3-1",
+    "email": "markjustin.aguirre@cvsu.edu.ph",
+    "address": "Tagaytay, Cavite"
+  },
+  {
+    "id": 6,
+    "name": "Michael Bustos",
+    "studentNumber": "202301678",
+    "course": "BS Information Technology",
+    "yearSection": "3-1",
+    "email": "michael.bustos@cvsu.edu.ph",
+    "address": "Indang, Cavite"
+  }
+]

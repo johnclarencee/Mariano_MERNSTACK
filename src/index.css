@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: white;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  border-bottom: 1px solid black;
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar__mark {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar__title {
+  font-size: 14px;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 18px;
+}
+
+.navbar__link {
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar__link:hover {
+  text-decoration: underline;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.home {
+  max-width: 600px;
+}
+
+.home__eyebrow {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.home__title {
+  margin: 0 0 12px;
+  font-size: 28px;
+}
+
+.home__lede {
+  margin: 0 0 20px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.home__cta {
+  display: inline-block;
+  padding: 8px 15px;
+  border: 1px solid black;
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.home__cta:hover {
+  background: black;
+  color: white;
+}
+
+.students__title {
+  margin: 0 0 5px;
+  font-size: 24px;
+}
+
+.students__count {
+  margin: 0 0 20px;
+  font-size: 14px;
+}
+
+.students__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.student-card {
+  padding: 15px;
+  border: 1px solid black;
+}
+
+.student-card__name {
+  margin: 0 0 5px;
+  font-size: 17px;
+}
+
+.student-card__number {
+  margin: 0 0 5px;
+  font-size: 13px;
+}
+
+.student-card__meta {
+  margin: 0 0 5px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.student-card__link {
+  color: black;
+  font-size: 14px;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.details__back {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: black;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.details__back:hover {
+  text-decoration: underline;
+}
+
+.details__card {
+  padding: 0;
+}
+
+.details__name {
+  margin: 0 0 15px;
+  font-size: 24px;
+}
+
+.details__list {
+  margin: 0;
+}
+
+.details__row {
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.details__row dt {
+  font-weight: bold;
+  margin: 0;
+}
+
+.details__row dd {
+  margin: 0 0 5px;
+}
+
+.details--empty {
+  text-align: left;
+}
+
+.home form input {
+  width: 100%;
+  max-width: 320px;
+  padding: 8px;
+  border: 1px solid black;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.home form button {
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .students__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    padding: 12px 15px;
+  }
+
+  .navbar__links {
+    gap: 12px;
+  }
+
+  .page {
+    padding: 25px 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .details__row {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}

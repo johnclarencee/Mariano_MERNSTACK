@@ -1,23 +1,41 @@
-import Student from './components/student.jsx'
-import Subject from './components/subject.jsx'
+import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar.jsx'
+import Home from './pages/Home.jsx'
+import Students from './pages/Students.jsx'
+import StudentDetails from './pages/StudentDetails.jsx'
+import AddStudent from './pages/AddStudent.jsx'
+import initialStudents from './data/students.json'
 
 function App() {
+  const [students, setStudents] = useState(initialStudents)
+
+  const handleAddStudent = (newStudent) => {
+    const nextId =
+      students.length > 0 ? Math.max(...students.map((s) => s.id)) + 1 : 1
+
+    setStudents([{ ...newStudent, id: nextId }, ...students])
+  }
+
   return (
-    <>
-    <div>
-      <Student name="Clarence Mariano" age="20" section="BSIT 3-1" student_number="202400197" course="Information Technology" />
+    <BrowserRouter>
+      <Navbar />
+      <div className="page">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/students" element={<Students students={students} />} />
+          <Route
+            path="/students/:id"
+            element={<StudentDetails students={students} />}
+          />
+          <Route
+            path="/add-student"
+            element={<AddStudent students={students} onAdd={handleAddStudent} />}
+          />
+        </Routes>
       </div>
-
-<br></br>
-<hr></hr>
-<br></br>
-
-     <div>
-       <Subject name="Application Development and Emerging Technologies" code="20260534" units="3" />
-      </div>
-      </>
+    </BrowserRouter>
   )
 }
-
 
 export default App
